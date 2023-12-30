@@ -1,38 +1,136 @@
-.App {
+/* General Styles _____________________________________________________________________________ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #202020;
+  color: #fff;
+}
+
+.container {
+  background: linear-gradient(to right top, #7d3dbc, #5a39bc);
+  padding: 2rem;
+  max-width: 37.5rem;
+  margin: 4rem auto;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* SearchBar Styles */
+.weather_search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.weather_search input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.weather_search button {
+  background-color: #5a39bc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.weather_search button:hover {
+  background-color: #7d3dbc;
+}
+
+/* CurrentWeather Styles____________________________________________________________________ */
+.current-weather {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.current-weather h1 {
+  margin-bottom: 10px;
+}
+
+.current-weather p {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+/* WeatherDetails Styles_____________________________________________________________________ */
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(40, 40, 40, 0.4);
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+
+.weather-card i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.weather-card p {
+  font-size: 0.875rem;
+}
+
+/* Forecast Styles___________________________________________________________________________ */
+.forecast-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.forecast-day {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.forecast-day img {
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.forecast-day p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .forecast-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-details {
+    grid-template-columns: 1fr;
   }
 }
