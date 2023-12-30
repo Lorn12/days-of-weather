@@ -3,16 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
   background: #202020;
-  color: #fff;
 }
 
 .container {
   background: linear-gradient(to right top, #7d3dbc, #5a39bc);
+  color: #fff;
   padding: 2rem;
   max-width: 37.5rem;
   margin: 4rem auto;
@@ -24,34 +24,49 @@ body {
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-/* SearchBar Styles */
+/* SearchBar Styles_____________________________________________________________________________ */
 .weather_search {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  background: rgba(40, 40, 40, 0.4);
+  border-radius: 60px;
+  padding: 0.25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .weather_search input {
-  flex: 1;
-  padding: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
   border: none;
-  font-size: 16px;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.weather_search input::placeholder {
+  color: #fff;
 }
 
 .weather_search button {
-  background-color: #5a39bc;
-  color: white;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 0.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .weather_search button:hover {
-  background-color: #7d3dbc;
+  cursor: pointer;
+  background: rgba(40, 40, 40, 0.1);
+}
+
+.weather_search i {
+  color: #fff;
+  width: 20px;
 }
 
 /* CurrentWeather Styles____________________________________________________________________ */

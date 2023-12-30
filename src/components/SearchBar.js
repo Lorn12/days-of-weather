@@ -15,14 +15,16 @@ function SearchBar({ onSearch }) {
   //DISPLAY ___________________________________________________________________________________________________________
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="weather_search" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Search City"
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <button type="submit">Search</button>
+      <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </form>
   );
 }
